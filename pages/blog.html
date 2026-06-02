@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog</title>
+  <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/styles/blog.css">
+</head>
+<body>
+  <header></header>
+  <main>
+    <section class="portada">
+      <div class="portada-container">
+        <h1>Artículos del blog</h1>
+      </div>
+    </section>
+    <section class="categories">
+      <div class="categories-container">
+      <label >Categorías: </label>
+      <label for="todas">Todas</label>
+      <label for="finanzas">Finanzas</label>
+      <label for="inversiones">Inversiones</label>
+      <label for="trading">Trading</label>
+      <label for="desarrollo">Desarrollo Personal</label>
+      <label for="emprendimiento">Emprendimiento</label>
+      </div>
+    </section>
+    <section class="articles">
+      <article class="articles-container">
+        <!--Activadores-->
+        <input type="radio" id="todas" name="categorias" checked/>
+        <input type="radio" id="finanzas" name="categorias"/>
+        <input type="radio" id="inversiones" name="categorias"/>
+        <input type="radio" id="trading" name="categorias"/>
+        <input type="radio" id="desarrollo" name="categorias"/>
+        <input type="radio" id="emprendimiento" name="categorias"/>
+        <!--Artículos-->
+        <div class="article" category="finanzas">
+          <img src="/images/perfil.png" alt="" />
+          <h2>Finanzas para principiantes</h2>
+          <p>Finanzas</p>
+        </div>
+        <div class="article" category="inversiones">
+          <img src="/images/perfil.png" alt="" />
+          <h2>Cómo invertir en empresas de calidad</h2>
+          <p>Inversiones</p>
+        </div>
+        <div class="article" category="trading">
+          <img src="/images/perfil.png" alt="" />
+          <h2>5 Factos para ganar dinero con el trading</h2>
+          <p>Trading</p>
+        </div>
+        <div class="article" category="desarrollo">
+          <img src="/images/perfil.png" alt="" />
+          <h2>Cómo alcanzar tu máximo potencial</h2>
+          <p>Desarrollo personal</p>
+        </div>
+        <div class="article" category="emprendimiento">
+          <img src="/images/perfil.png" alt="" />
+          <h2>Cómo empezar tu empresa Holding de inversiones</h2>
+          <p>Emprendimiento</p>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer></footer>
+  <script src="/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+.portada-container{
+  width: 80%;
+  margin: auto;
+  padding: 50px 0;
+}
+.categories-container{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.categories-container label:first-child{
+  font-weight: bold;
+}
+.articles{
+  padding: 50px 0;
+}
+.articles-container{
+  width: 80%;
+  margin: auto; 
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 15px;
+}
+.article{
+  background: #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  padding-right: 15px;
+}
+.article img{
+  width: 30%;
+  aspect-ratio: 16/9;
+  border-radius: 10px 0 0 10px;
+}
+.articles-container input{
+  display: none;
+}
+/*-------SISTEMA DE FILTRADO-----*/
+input[id="finanzas"]:checked ~ .article:not([category="finanzas"]),
+input[id="inversiones"]:checked ~ .article:not([category="inversiones"]),
+input[id="trading"]:checked ~ .article:not([category="trading"]),
+input[id="desarrollo"]:checked ~ .article:not([category="desarrollo"]),
+input[id="emprendimiento"]:checked ~ .article:not([category="emprendimiento"]){
+  display: none;
+}
+
+/*----------BLOG QUERIES----------*/
+@media (max-width: 768px) {
+  .portada-container,.categories-container, .articles-container{
+    width: 90%;
+  }
+  .portada-container{
+    text-align: center;
+  }
+  .articles-container{
+    grid-template-columns: 1fr;
+  }
+}

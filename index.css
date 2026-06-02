@@ -1,0 +1,369 @@
+/*ESTILOS GENERALES*/
+:root{
+  --color-primario: #fff;
+  --color-secundario: #1B263B;
+  --color-complementario: #005770
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: poppins, sans-serif;
+}
+/*ESTILOS DEL HEADER*/
+.header{
+  display: flex;
+  padding: 10px 5%;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-secundario);
+  color: #fff;
+}
+.header a{
+  color:#fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+.header a:hover, .hover a:visited{
+  text-decoration: underline;
+}
+input[id="open-menu"], label[for="open-menu"]{
+  display: none;
+}
+.header nav{
+  display: flex;
+  justify-content: space-between;
+  width: 68.5%;
+}
+nav ul{
+  display: flex;
+  gap: 15px;
+}
+ul li{
+  list-style: none;
+}
+i{
+  font-size: 24px;
+  color: red;
+}
+
+/*HEADER QUERIES*/
+@media (max-width: 768px) {
+  label[for="open-menu"]{
+    display: block;
+  }
+  .header nav{
+    display: none;
+    background: #1B263B;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 60%;
+    padding: 40px 0;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #005770;
+  }
+  nav ul{
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .logo-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  input[id="open-menu"]:checked ~ nav{
+    display: block;
+  }
+  .redes{
+    margin-top: 30px;
+  }
+}
+/*ESTILOS DEL HERO SECTION*/
+.hero{
+  background: linear-gradient(#fff,#005770);
+  padding: 70px 0;
+}
+.hero-container{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.hero-content{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  color: var(--color-secundario);
+}
+.hero-content h1{
+  font-size: 54px;
+}
+.cta{ 
+  display: flex;
+  gap: 13px;
+}
+.cta a{
+  display: inline-block;
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.cta .btn-one{
+  background: #1B263B;
+  color: #fff;
+}
+.cta .btn-two{
+  background: #fff;
+  color: #1B263B;
+  border: 2px solid #1B263B;
+}
+.cta .btn-three{
+  background: #fff;
+  color: #1B263B;
+}
+.cta .btn-four{
+  background: #1B263B;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.hero-img{
+  width: 35%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 7px solid #fff;
+  margin: auto;
+}
+.hero-img img{
+  width: 100%;
+}
+
+/*HERO QUERIES*/
+@media (max-width: 768px){
+  .hero-container{
+    width: 90%;
+    flex-direction: column-reverse;
+  }
+  .hero-content{
+    width: 100%;
+    text-align: center;
+  }
+  .hero-img{
+    width: 60%;
+  }
+  .hero-content .cta{
+    justify-content: center;
+  }
+}
+
+/*TICKERS DE TRADINGVIEW*/
+  .tickers{
+    position: relative;
+  }
+  .cubre-tickers{
+    position: absolute;
+    top: 57px;
+    right: 0;
+    left: 0;
+    height: 30px;
+    background-color: var(--color-primario);
+  }
+
+/*ESTILOS SECCIÓN SERVICIOS*/
+.services{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 20px 0 50px 0;
+}
+.services h2{
+  font-size: 30px;
+}
+.services-container{
+  width: 80%;
+  display: flex;
+  gap: 15px;
+}
+.services-item{
+  width: 33.3%;
+  background: #1B263B;
+  border-radius: 10px;
+  text-align: center;
+  padding: 40px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.service-icon{
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  padding: 15px;
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+}
+.service-icon span{
+  font-size: 54px;
+}
+.services-item h3{
+  font-size: 24px;
+}
+.services-item .enlace{
+  background: #005770;
+  padding: 13px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+.services-item .enlace a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+/*SECCIÓN SERVICIOS QUERIES*/
+@media (max-width: 768px) {
+  .services-container{
+    width: 90%;
+    flex-direction: column;
+  }
+  .services-item{
+    width: 100%;
+  }
+  
+}
+
+/*ESTILOS DEL PORTAFOLIO*/
+.porfolio{
+  background: #1B263B;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 50px 0;
+}
+.porfolio-container{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.porfolio-item{
+  background: #fff;
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+/*PORTAFOLIO QUERIES*/
+@media (max-width: 768px) {
+  .porfolio-container{
+    width: 90%;
+    flex-direction: column;
+  }
+}
+
+/*PREGUNTAS FRECUENTES*/
+.preguntas{
+  padding: 50px 0;
+}
+.preguntas h2{
+  text-align: center;
+}
+.qas-container{
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
+}
+details{
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 10px;
+}
+summary{
+  font-weight: bold;
+  font-size: 17px;
+  color: #1B263B;
+  display: flex;
+  justify-content: space-between;
+}
+summary::mixer{
+  content: '';
+}
+summary::after{
+  content: '+';
+  color: #8e8e8e;
+}
+details[open] summary::after{
+  content: '-';
+}
+details[open] p{
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .qas-container{
+    width: 90%;
+  }
+}
+
+/*ESTILOS DEL FOOTER*/
+.footer{
+  background: #1B263B;
+  color: #fff;
+}
+.footer .redes{
+  padding: 30px 5% 0 5%;
+}
+.footer-items{
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 5%;
+}
+.disclaimer{
+  width: 48%;
+}
+.footer-items p{
+  color: #ccc;
+}
+.footer-items a{
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+}
+.footer-items a:hover{
+  text-decoration: 1px underline #ccc;
+}
+.copyright{
+  background: #1B262B;
+  width: 100%;
+  text-align: center;
+  padding: 20px 5%;
+}
+
+/*FOOTER QUERIES*/
+
+@media(max-width: 768px) {
+  .footer-items{
+    flex-direction: column;
+    gap: 20px;
+  }
+.footer-items div{ 
+    width: 100%}
+}

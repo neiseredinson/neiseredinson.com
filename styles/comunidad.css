@@ -1,0 +1,84 @@
+/*ESTILOS DE PORTADA*/
+.portada-comunity{
+  height: 168px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/images/perfil.png");
+  color: #fff;
+  background-size: cover;
+  
+}
+
+/*ESTILOS GENERALES DE PRODUCTOS*/
+.comunitys{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 50px 0;
+}
+.comunity-container{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  gap: 15px;
+  border-radius: 10px;
+}
+.comunity-content{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+}
+.comunity-img{
+  width: 40%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 0px 10px 10px 0px;
+}
+.comunity-img img{
+  width: 100%;
+}
+
+/*MODIFICADORES COLOR DE FONDO*/
+.traders,.investors{
+  background: #1B263B;
+  color: #fff;
+}
+
+/*ESTILOS DE EXPERIENCIAS*/
+.experiencies{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 50px 0;
+}
+.experiencies-img{
+  width: 80%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.experiencies-img img{
+  width: 100%;
+}
+@media (max-width: 768px) {
+.comunity-container{
+    width: 90%;
+    flex-direction: column-reverse;
+  }
+.comunity-content{
+    width: 100%;
+    padding: 5px 15px 25px 15px;
+  }
+.comunity-img{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+  }
+.experiencies-img{
+  width: 90%;
+}
+}

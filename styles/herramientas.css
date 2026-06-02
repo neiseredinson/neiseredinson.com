@@ -1,0 +1,47 @@
+.portada{
+  background: #005770;
+  padding: 50px 10%;
+}
+.portada-container{
+  margin: auto;
+  text-align: center;
+  color:#fff;
+}
+.tools{
+  padding: 50px 10%;
+}
+.tools-container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 15px;
+}
+.tool-item{
+  background: #1B263B;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+.tool-item a{
+  display: inline-block;
+  color: #fff;
+  background: #005770;
+  padding: 10px;
+  border-radius: 10px;
+  width: fit-content;
+  text-decoration: none;
+}
+
+/*MEDIA QUERIES*/
+@media(max-width: 768px){
+  .tools{
+    padding: 50px 5%;
+  }
+  .tools-container{
+    grid-template-columns: repeat(2,1fr);
+    
+  }
+}
